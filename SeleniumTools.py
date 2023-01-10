@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.service import Service
+from selenium.webdriver.chrome.service import Service
 import urllib
 import pathlib
 
@@ -45,7 +45,7 @@ def tryGetting(driver, elementType, element):
         except NoSuchElementException:
             continue
 
-def driverSetup():
+def createDriver():
     """
     Returns a webdriver that is ready to use for automation.
     """
